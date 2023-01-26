@@ -90,7 +90,7 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
             button.setTitleColor(UIColor.white, for: .selected)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
             return button
-       
+        
         
     }
     
@@ -103,15 +103,19 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
     }
     
     func heightForHeader() -> CGFloat {
-        return 70
+        return 60
     }
     
     func shouldEnableSwipeable() -> Bool {
         return false
     }
     
-    func didSelectButton(at index: Int) {
-        button(at: index).setTitleColor(UIColor.blue, for: .normal)
+    func leftMarginForHeader() -> CGFloat {
+        return 15
+    }
+    
+    func rightMarginForHeader() -> CGFloat {
+        return 15
     }
     
     
