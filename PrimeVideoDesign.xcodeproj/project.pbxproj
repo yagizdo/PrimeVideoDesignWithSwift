@@ -15,6 +15,9 @@
 		104412D229829E1000594CCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D129829E1000594CCD /* HomeViewController.swift */; };
 		104412D52982B00000594CCD /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D42982B00000594CCD /* HomeTabViewController.swift */; };
 		104412D72982B00E00594CCD /* OriginalsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D62982B00E00594CCD /* OriginalsTabViewController.swift */; };
+		104412D92982B69600594CCD /* TVTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D82982B69600594CCD /* TVTabViewController.swift */; };
+		104412DB2982B6A100594CCD /* MoviesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412DA2982B6A100594CCD /* MoviesTabViewController.swift */; };
+		104412DD2982B6AB00594CCD /* KidsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412DC2982B6AB00594CCD /* KidsTabViewController.swift */; };
 		815C2FD64A73E35C29AA411D /* Pods_PrimeVideoDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		104412D129829E1000594CCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		104412D42982B00000594CCD /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		104412D62982B00E00594CCD /* OriginalsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalsTabViewController.swift; sourceTree = "<group>"; };
+		104412D82982B69600594CCD /* TVTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTabViewController.swift; sourceTree = "<group>"; };
+		104412DA2982B6A100594CCD /* MoviesTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabViewController.swift; sourceTree = "<group>"; };
+		104412DC2982B6AB00594CCD /* KidsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTabViewController.swift; sourceTree = "<group>"; };
 		2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeVideoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56290163A864C70DD54C6D37 /* Pods-PrimeVideoDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.debug.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.debug.xcconfig"; sourceTree = "<group>"; };
 		EB7BB5C566FB7F2963D9CCF3 /* Pods-PrimeVideoDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.release.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 			children = (
 				104412D42982B00000594CCD /* HomeTabViewController.swift */,
 				104412D62982B00E00594CCD /* OriginalsTabViewController.swift */,
+				104412D82982B69600594CCD /* TVTabViewController.swift */,
+				104412DA2982B6A100594CCD /* MoviesTabViewController.swift */,
+				104412DC2982B6AB00594CCD /* KidsTabViewController.swift */,
 			);
 			path = TabControllers;
 			sourceTree = "<group>";
@@ -220,11 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104412DB2982B6A100594CCD /* MoviesTabViewController.swift in Sources */,
 				104412D229829E1000594CCD /* HomeViewController.swift in Sources */,
 				104412D52982B00000594CCD /* HomeTabViewController.swift in Sources */,
 				104412BE298298F000594CCD /* AppDelegate.swift in Sources */,
 				104412D72982B00E00594CCD /* OriginalsTabViewController.swift in Sources */,
+				104412D92982B69600594CCD /* TVTabViewController.swift in Sources */,
 				104412C0298298F000594CCD /* SceneDelegate.swift in Sources */,
+				104412DD2982B6AB00594CCD /* KidsTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

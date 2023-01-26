@@ -89,7 +89,7 @@
 		15DBA4BDF73574446D3D1B9B143B44D1 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		169C84FD83C6105B374B3ABAA3E4A281 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		1A9BF8CF9880A747B381EF0BACB9C434 /* LZViewPager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LZViewPager-umbrella.h"; sourceTree = "<group>"; };
-		230691787B5AC2E5316DF3050985E21C /* LZViewPager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LZViewPager; path = LZViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		230691787B5AC2E5316DF3050985E21C /* LZViewPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LZViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B83304D402C41E742F934EECE2A9A /* Pods-PrimeVideoDesign-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrimeVideoDesign-acknowledgements.markdown"; sourceTree = "<group>"; };
 		269DB285504086DCAFA5149A9A75ECAB /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		2BE6CDC966A1C97700A93316D3A5B257 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		924738FCDD5BEC01D31E3F9E1E9BDC49 /* Pods-PrimeVideoDesign */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PrimeVideoDesign"; path = Pods_PrimeVideoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9475AB96136AD78B94E63D6840905225 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5E659EC59452FE0B03B5BE865F1ADEF /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		B03337693CF6E541643B3E52D7D7DCB0 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		B0B503AF57686632C7ADC7097671433E /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
@@ -213,7 +213,6 @@
 				702C6B3698A554DFED7CC7B208F47A8B /* LZViewPagerHeader.swift */,
 				839ABC6D0E3960D45788B2FF85F81AF1 /* Support Files */,
 			);
-			name = LZViewPager;
 			path = LZViewPager;
 			sourceTree = "<group>";
 		};
@@ -254,7 +253,7 @@
 		81BEA8752C4069A42E8AFA8F9503D1EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				230691787B5AC2E5316DF3050985E21C /* LZViewPager */,
+				230691787B5AC2E5316DF3050985E21C /* LZViewPager.framework */,
 				924738FCDD5BEC01D31E3F9E1E9BDC49 /* Pods-PrimeVideoDesign */,
 				979486118B3E90C08386079D57962701 /* SnapKit */,
 			);
@@ -337,7 +336,6 @@
 				51317F854CA1E67AD39F5A7E21EE6CF7 /* UILayoutSupport+Extensions.swift */,
 				017F753E0EC9EDF1E1DC6A6303612C3B /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -425,7 +423,7 @@
 			);
 			name = LZViewPager;
 			productName = LZViewPager;
-			productReference = 230691787B5AC2E5316DF3050985E21C /* LZViewPager */;
+			productReference = 230691787B5AC2E5316DF3050985E21C /* LZViewPager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

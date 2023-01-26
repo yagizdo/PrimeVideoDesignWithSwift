@@ -67,6 +67,33 @@
             </objects>
             <point key="canvasLocation" x="2357" y="-366"/>
         </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="XKy-sV-blt">
+            <objects>
+                <viewController storyboardIdentifier="TVTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NXb-im-qh2" customClass="TVTabViewController" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0h-0C-EQL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV TAB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6O-ju-nrO">
+                                <rect key="frame" x="158.5" y="430" width="97" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ciG-gF-VPp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g6O-ju-nrO" firstAttribute="centerY" secondItem="n0h-0C-EQL" secondAttribute="centerY" id="M67-36-epq"/>
+                            <constraint firstItem="g6O-ju-nrO" firstAttribute="centerX" secondItem="n0h-0C-EQL" secondAttribute="centerX" id="b8r-IW-0dH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcI-0Z-w1O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3051" y="-366"/>
+        </scene>
         <!--Originals Tab View Controller-->
         <scene sceneID="GaN-ak-7dl">
             <objects>
@@ -93,6 +120,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13q-Qy-e6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2357" y="303"/>
+        </scene>
+        <!--Movies Tab View Controller-->
+        <scene sceneID="uSy-D7-1ve">
+            <objects>
+                <viewController storyboardIdentifier="MoviesTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b14-dy-qoR" customClass="MoviesTabViewController" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GL0-hw-3yJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecX-w6-5fi">
+                                <rect key="frame" x="134" y="430" width="146" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UMi-bl-vgK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ecX-w6-5fi" firstAttribute="centerX" secondItem="GL0-hw-3yJ" secondAttribute="centerX" id="Nj8-Pt-Am5"/>
+                            <constraint firstItem="ecX-w6-5fi" firstAttribute="centerY" secondItem="GL0-hw-3yJ" secondAttribute="centerY" id="jGU-kP-JUY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jba-Bi-eKO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3051" y="303"/>
+        </scene>
+        <!--Kids Tab View Controller-->
+        <scene sceneID="Ed3-TO-cqN">
+            <objects>
+                <viewController storyboardIdentifier="KidsTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gcb-uR-Xib" customClass="KidsTabViewController" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgh-8U-tT3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kids Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbK-Dw-14X">
+                                <rect key="frame" x="152.5" y="430" width="109.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D7q-zm-tPU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbK-Dw-14X" firstAttribute="centerX" secondItem="Jgh-8U-tT3" secondAttribute="centerX" id="Bu8-hM-0S6"/>
+                            <constraint firstItem="nbK-Dw-14X" firstAttribute="centerY" secondItem="Jgh-8U-tT3" secondAttribute="centerY" id="Got-DL-QCd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efo-jo-t3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3746" y="-366"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5gn-d2-Q5b">

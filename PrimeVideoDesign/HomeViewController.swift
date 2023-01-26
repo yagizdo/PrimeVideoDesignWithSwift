@@ -61,7 +61,18 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
         let originalsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OriginalsTabViewController") as! OriginalsTabViewController
         originalsTab.title = "Originals"
         
-        tabs = [homeTab,originalsTab]
+        let TVTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TVTabViewController") as! TVTabViewController
+        TVTab.title = "TV"
+
+        
+        let MoviesTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoviesTabViewController") as! MoviesTabViewController
+        MoviesTab.title = "Movies"
+
+        
+        let KidsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "KidsTabViewController") as! KidsTabViewController
+        KidsTab.title = "Kids"
+
+        tabs = [homeTab,originalsTab,TVTab,MoviesTab,KidsTab]
         viewPager.reload()
     }
     
