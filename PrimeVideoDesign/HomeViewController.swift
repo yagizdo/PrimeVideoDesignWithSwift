@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import LZViewPager
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var viewPager: LZViewPager!
+    
+    private var tabs:[UIViewController] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +30,8 @@ class HomeViewController: UIViewController {
         // Add appearence on navbar
         tabBarController?.tabBar.standardAppearance = appearence
         tabBarController?.tabBar.scrollEdgeAppearance = appearence
+        
+        viewPagerProperties()
     }
     
     func changeNavbarItemColor(itemAppearence:UITabBarItemAppearance) {
@@ -39,4 +46,63 @@ class HomeViewController: UIViewController {
         //itemAppearence.normal.badgeBackgroundColor = UIColor.lightGray
     }
 
+}
+
+extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
+
+    func viewPagerProperties() {
+        self.viewPager.delegate = self
+        self.viewPager.dataSource = self
+        self.viewPager.hostController = self
+        
+        let homeTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeTabViewController") as! HomeTabViewController
+        homeTab.title = "Home"
+        
+        let originalsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OriginalsTabViewController") as! OriginalsTabViewController
+        originalsTab.title = "Originals"
+        
+        tabs = [homeTab,originalsTab]
+        viewPager.reload()
+    }
+    
+    func numberOfItems() -> Int {
+        return tabs.count
+    }
+    
+    func controller(at index: Int) -> UIViewController {
+        return tabs[index]
+    }
+    
+    func button(at index: Int) -> UIButton {
+            let button = UIButton()
+            button.setTitleColor(UIColor(named: "unselectedNavbarItemColor"), for: .normal)
+            button.setTitleColor(UIColor.white, for: .selected)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            return button
+       
+        
+    }
+    
+    func backgroundColorForHeader() -> UIColor {
+        return UIColor(named: "backgroundColor")!
+    }
+    
+    func colorForIndicator(at index: Int) -> UIColor {
+        return UIColor.white
+    }
+    
+    func heightForHeader() -> CGFloat {
+        return 70
+    }
+    
+    func shouldEnableSwipeable() -> Bool {
+        return false
+    }
+    
+    func didSelectButton(at index: Int) {
+        button(at: index).setTitleColor(UIColor.blue, for: .normal)
+    }
+    
+    
+    
 }

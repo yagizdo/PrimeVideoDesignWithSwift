@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,14 +16,83 @@
                     <view key="view" contentMode="scaleToFill" id="5qe-NH-01C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-fV-gVW" customClass="LZViewPager" customModule="LZViewPager">
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wIQ-cv-iJ7"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kNp-fV-gVW" firstAttribute="top" secondItem="wIQ-cv-iJ7" secondAttribute="top" id="7er-mH-Kex"/>
+                            <constraint firstItem="wIQ-cv-iJ7" firstAttribute="bottom" secondItem="kNp-fV-gVW" secondAttribute="bottom" id="AAI-ls-0rf"/>
+                            <constraint firstItem="wIQ-cv-iJ7" firstAttribute="trailing" secondItem="kNp-fV-gVW" secondAttribute="trailing" id="YcY-U1-d4t"/>
+                            <constraint firstItem="kNp-fV-gVW" firstAttribute="leading" secondItem="wIQ-cv-iJ7" secondAttribute="leading" id="f34-mo-s9h"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="oO9-C4-FF7"/>
+                    <connections>
+                        <outlet property="viewPager" destination="kNp-fV-gVW" id="wIx-9p-VkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAM-MJ-vfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642.0289855072465" y="-43.526785714285715"/>
+        </scene>
+        <!--Home Tab View Controller-->
+        <scene sceneID="6xi-fN-fF9">
+            <objects>
+                <viewController storyboardIdentifier="HomeTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Tc-Xb-oIT" customClass="HomeTabViewController" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ep9-ea-o5d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-mz-VSQ">
+                                <rect key="frame" x="141.5" y="430" width="131" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2TT-mT-daZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IUF-mz-VSQ" firstAttribute="centerY" secondItem="ep9-ea-o5d" secondAttribute="centerY" id="ANY-Bc-tzQ"/>
+                            <constraint firstItem="IUF-mz-VSQ" firstAttribute="centerX" secondItem="ep9-ea-o5d" secondAttribute="centerX" id="GkJ-T5-PnR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyd-kE-Xri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357" y="-366"/>
+        </scene>
+        <!--Originals Tab View Controller-->
+        <scene sceneID="GaN-ak-7dl">
+            <objects>
+                <viewController storyboardIdentifier="OriginalsTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ojE-to-hUY" customClass="OriginalsTabViewController" customModule="PrimeVideoDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UYi-0p-sDt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Originals Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-QD-Fbv">
+                                <rect key="frame" x="123.5" y="430" width="167.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ga9-6I-RPK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2tR-QD-Fbv" firstAttribute="centerY" secondItem="UYi-0p-sDt" secondAttribute="centerY" id="Joo-FZ-oys"/>
+                            <constraint firstItem="2tR-QD-Fbv" firstAttribute="centerX" secondItem="UYi-0p-sDt" secondAttribute="centerX" id="O58-xJ-8jy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13q-Qy-e6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357" y="303"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5gn-d2-Q5b">
@@ -30,6 +100,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="phL-O0-fsp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kKq-Lp-lVF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -45,7 +116,10 @@
     <resources>
         <image name="homeIcon" width="27" height="27"/>
         <namedColor name="backgroundColor">
-            <color red="0.14509803921568626" green="0.1803921568627451" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14499999582767487" green="0.18000000715255737" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

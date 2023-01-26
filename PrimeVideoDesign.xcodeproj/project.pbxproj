@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		104412C7298298F100594CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104412C6298298F100594CCD /* Assets.xcassets */; };
 		104412CA298298F100594CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104412C8298298F100594CCD /* LaunchScreen.storyboard */; };
 		104412D229829E1000594CCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D129829E1000594CCD /* HomeViewController.swift */; };
+		104412D52982B00000594CCD /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D42982B00000594CCD /* HomeTabViewController.swift */; };
+		104412D72982B00E00594CCD /* OriginalsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D62982B00E00594CCD /* OriginalsTabViewController.swift */; };
+		815C2FD64A73E35C29AA411D /* Pods_PrimeVideoDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		104412C9298298F100594CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104412CB298298F100594CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104412D129829E1000594CCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		104412D42982B00000594CCD /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		104412D62982B00E00594CCD /* OriginalsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalsTabViewController.swift; sourceTree = "<group>"; };
+		2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeVideoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56290163A864C70DD54C6D37 /* Pods-PrimeVideoDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.debug.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.debug.xcconfig"; sourceTree = "<group>"; };
+		EB7BB5C566FB7F2963D9CCF3 /* Pods-PrimeVideoDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.release.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815C2FD64A73E35C29AA411D /* Pods_PrimeVideoDesign.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				104412BC298298F000594CCD /* PrimeVideoDesign */,
 				104412BB298298F000594CCD /* Products */,
+				7D84B3273C0B53A7B43AB9B5 /* Pods */,
+				B1DDDCF45D1A6BF2079794D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		104412BC298298F000594CCD /* PrimeVideoDesign */ = {
 			isa = PBXGroup;
 			children = (
+				104412D32982AFE600594CCD /* TabControllers */,
 				104412BD298298F000594CCD /* AppDelegate.swift */,
 				104412BF298298F000594CCD /* SceneDelegate.swift */,
 				104412D129829E1000594CCD /* HomeViewController.swift */,
@@ -67,6 +79,32 @@
 			path = PrimeVideoDesign;
 			sourceTree = "<group>";
 		};
+		104412D32982AFE600594CCD /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				104412D42982B00000594CCD /* HomeTabViewController.swift */,
+				104412D62982B00E00594CCD /* OriginalsTabViewController.swift */,
+			);
+			path = TabControllers;
+			sourceTree = "<group>";
+		};
+		7D84B3273C0B53A7B43AB9B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56290163A864C70DD54C6D37 /* Pods-PrimeVideoDesign.debug.xcconfig */,
+				EB7BB5C566FB7F2963D9CCF3 /* Pods-PrimeVideoDesign.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B1DDDCF45D1A6BF2079794D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 104412CE298298F100594CCD /* Build configuration list for PBXNativeTarget "PrimeVideoDesign" */;
 			buildPhases = (
+				1CB11D690B9BC80033C7BB25 /* [CP] Check Pods Manifest.lock */,
 				104412B6298298F000594CCD /* Sources */,
 				104412B7298298F000594CCD /* Frameworks */,
 				104412B8298298F000594CCD /* Resources */,
+				77824822576228980DA513EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +143,7 @@
 				};
 			};
 			buildConfigurationList = 104412B5298298F000594CCD /* Build configuration list for PBXProject "PrimeVideoDesign" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -133,13 +173,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CB11D690B9BC80033C7BB25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrimeVideoDesign-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77824822576228980DA513EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		104412B6298298F000594CCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				104412D229829E1000594CCD /* HomeViewController.swift in Sources */,
+				104412D52982B00000594CCD /* HomeTabViewController.swift in Sources */,
 				104412BE298298F000594CCD /* AppDelegate.swift in Sources */,
+				104412D72982B00E00594CCD /* OriginalsTabViewController.swift in Sources */,
 				104412C0298298F000594CCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +366,7 @@
 		};
 		104412CF298298F100594CCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56290163A864C70DD54C6D37 /* Pods-PrimeVideoDesign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +395,7 @@
 		};
 		104412D0298298F100594CCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7BB5C566FB7F2963D9CCF3 /* Pods-PrimeVideoDesign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
