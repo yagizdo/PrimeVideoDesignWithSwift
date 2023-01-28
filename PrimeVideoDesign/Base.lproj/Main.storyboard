@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,20 +81,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-mz-VSQ">
-                                <rect key="frame" x="141.5" y="430" width="131" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="est-xn-40j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="5gg-BQ-0we"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lr8-iv-yOj">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageSliderCell" id="tw4-9z-Wf1" customClass="ImageSliderCellCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mrf-pL-whb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="awD-4d-YmC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="awD-4d-YmC" secondAttribute="trailing" id="0db-u5-Qvc"/>
+                                                <constraint firstItem="awD-4d-YmC" firstAttribute="leading" secondItem="mrf-pL-whb" secondAttribute="leading" id="Jzg-Af-iIF"/>
+                                                <constraint firstAttribute="bottom" secondItem="awD-4d-YmC" secondAttribute="bottom" id="nNC-gq-czG"/>
+                                                <constraint firstItem="awD-4d-YmC" firstAttribute="top" secondItem="mrf-pL-whb" secondAttribute="top" id="vT5-1g-jWL"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="190"/>
+                                        <connections>
+                                            <outlet property="sliderImageView" destination="awD-4d-YmC" id="WvB-C9-hjn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="ftv-J6-pkd">
+                                <rect key="frame" x="0.0" y="198" width="414" height="26"/>
+                                <color key="pageIndicatorTintColor" name="unselectedNavbarItemColor"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2TT-mT-daZ"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IUF-mz-VSQ" firstAttribute="centerY" secondItem="ep9-ea-o5d" secondAttribute="centerY" id="ANY-Bc-tzQ"/>
-                            <constraint firstItem="IUF-mz-VSQ" firstAttribute="centerX" secondItem="ep9-ea-o5d" secondAttribute="centerX" id="GkJ-T5-PnR"/>
+                            <constraint firstItem="ftv-J6-pkd" firstAttribute="leading" secondItem="2TT-mT-daZ" secondAttribute="leading" id="3PZ-E8-CBQ"/>
+                            <constraint firstItem="ftv-J6-pkd" firstAttribute="top" secondItem="2TT-mT-daZ" secondAttribute="top" constant="150" id="7xs-Qd-XCs"/>
+                            <constraint firstItem="est-xn-40j" firstAttribute="trailing" secondItem="2TT-mT-daZ" secondAttribute="trailing" id="8qF-Kd-1lE"/>
+                            <constraint firstItem="2TT-mT-daZ" firstAttribute="trailing" secondItem="ftv-J6-pkd" secondAttribute="trailing" id="ARL-0a-FPQ"/>
+                            <constraint firstItem="est-xn-40j" firstAttribute="leading" secondItem="2TT-mT-daZ" secondAttribute="leading" id="V8d-PK-mAa"/>
+                            <constraint firstItem="est-xn-40j" firstAttribute="top" secondItem="ep9-ea-o5d" secondAttribute="top" id="zrE-4H-I9Q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageSliderCollectionView" destination="est-xn-40j" id="Pf8-ng-Zax"/>
+                        <outlet property="pageDots" destination="ftv-J6-pkd" id="OHi-wU-pqF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyd-kE-Xri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,10 +284,14 @@
     </scenes>
     <resources>
         <image name="homeIcon" width="24" height="22"/>
+        <image name="img1" width="347" height="145"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundColor">
-            <color red="0.062745098039215685" green="0.086274509803921567" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.063000001013278961" green="0.086000002920627594" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="unselectedNavbarItemColor">
+            <color red="0.48199999332427979" green="0.54900002479553223" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

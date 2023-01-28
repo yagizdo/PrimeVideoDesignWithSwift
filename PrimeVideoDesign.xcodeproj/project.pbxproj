@@ -17,6 +17,7 @@
 		104412D72982B00E00594CCD /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412D62982B00E00594CCD /* TVShowsViewController.swift */; };
 		104412DB2982B6A100594CCD /* MoviesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412DA2982B6A100594CCD /* MoviesTabViewController.swift */; };
 		104412DD2982B6AB00594CCD /* KidsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104412DC2982B6AB00594CCD /* KidsTabViewController.swift */; };
+		1071C2702985961F00AC0039 /* ImageSliderCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1071C26F2985961F00AC0039 /* ImageSliderCellCollectionViewCell.swift */; };
 		815C2FD64A73E35C29AA411D /* Pods_PrimeVideoDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		104412D62982B00E00594CCD /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
 		104412DA2982B6A100594CCD /* MoviesTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabViewController.swift; sourceTree = "<group>"; };
 		104412DC2982B6AB00594CCD /* KidsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsTabViewController.swift; sourceTree = "<group>"; };
+		1071C26F2985961F00AC0039 /* ImageSliderCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F9C7143B75835F7F9CCE3BE /* Pods_PrimeVideoDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrimeVideoDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56290163A864C70DD54C6D37 /* Pods-PrimeVideoDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.debug.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.debug.xcconfig"; sourceTree = "<group>"; };
 		EB7BB5C566FB7F2963D9CCF3 /* Pods-PrimeVideoDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrimeVideoDesign.release.xcconfig"; path = "Target Support Files/Pods-PrimeVideoDesign/Pods-PrimeVideoDesign.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				104412C6298298F100594CCD /* Assets.xcassets */,
 				104412C8298298F100594CCD /* LaunchScreen.storyboard */,
 				104412CB298298F100594CCD /* Info.plist */,
+				1071C26F2985961F00AC0039 /* ImageSliderCellCollectionViewCell.swift */,
 			);
 			path = PrimeVideoDesign;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				104412D72982B00E00594CCD /* TVShowsViewController.swift in Sources */,
 				104412C0298298F000594CCD /* SceneDelegate.swift in Sources */,
 				104412DD2982B6AB00594CCD /* KidsTabViewController.swift in Sources */,
+				1071C2702985961F00AC0039 /* ImageSliderCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
