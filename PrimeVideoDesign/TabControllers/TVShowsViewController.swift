@@ -1,5 +1,5 @@
 //
-//  TVTabViewController.swift
+//  OriginalsTabViewController.swift
 //  PrimeVideoDesign
 //
 //  Created by Yılmaz Yağız Dokumacı on 26.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TVTabViewController: UIViewController {
+class TVShowsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

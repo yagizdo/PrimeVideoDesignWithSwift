@@ -16,7 +16,18 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Add prime video logo on navigation title
+        let primeVideoLogoImage = UIImage(named: "primeVideoLogo")
+        
+        let titleLogoImageView = UIImageView(image: primeVideoLogoImage)
+        
+        titleLogoImageView.contentMode = .scaleAspectFit
+        
+        titleLogoImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        
+        self.navigationItem.titleView = titleLogoImageView
+        
         // Create appearence
         let appearence = UITabBarAppearance()
         appearence.backgroundColor = UIColor(named: "navbarBackgroundColor")
@@ -32,6 +43,10 @@ class HomeViewController: UIViewController {
         tabBarController?.tabBar.scrollEdgeAppearance = appearence
         
         viewPagerProperties()
+
+        // Remove thin line on top of tab bar
+        self.tabBarController?.tabBar.standardAppearance.configureWithTransparentBackground()
+        self.tabBarController?.tabBar.clipsToBounds = true
     }
     
     func changeNavbarItemColor(itemAppearence:UITabBarItemAppearance) {
@@ -48,6 +63,9 @@ class HomeViewController: UIViewController {
 
 }
 
+
+ 
+// Tab bar
 extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
 
     func viewPagerProperties() {
@@ -58,12 +76,8 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
         let homeTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeTabViewController") as! HomeTabViewController
         homeTab.title = "Home"
         
-        let originalsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OriginalsTabViewController") as! OriginalsTabViewController
-        originalsTab.title = "Originals"
-        
-        let TVTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TVTabViewController") as! TVTabViewController
-        TVTab.title = "TV"
-
+        let originalsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TVShowsViewController") as! TVShowsViewController
+        originalsTab.title = "TV Shows"
         
         let MoviesTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoviesTabViewController") as! MoviesTabViewController
         MoviesTab.title = "Movies"
@@ -72,7 +86,7 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
         let KidsTab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "KidsTabViewController") as! KidsTabViewController
         KidsTab.title = "Kids"
 
-        tabs = [homeTab,originalsTab,TVTab,MoviesTab,KidsTab]
+        tabs = [homeTab,originalsTab,MoviesTab,KidsTab]
         viewPager.reload()
     }
     
@@ -88,7 +102,7 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
             let button = UIButton()
             button.setTitleColor(UIColor(named: "unselectedNavbarItemColor"), for: .normal)
             button.setTitleColor(UIColor.white, for: .selected)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .medium)
             return button
         
         
@@ -103,7 +117,7 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
     }
     
     func heightForHeader() -> CGFloat {
-        return 60
+        return 35
     }
     
     func shouldEnableSwipeable() -> Bool {
@@ -118,6 +132,13 @@ extension HomeViewController : LZViewPagerDelegate, LZViewPagerDataSource {
         return 15
     }
     
+    func widthForIndicator(at index: Int) -> CGFloat {
+        return 60
+    }
+    
+    func heightForIndicator() -> CGFloat {
+        return 4
+    }
     
     
 }
