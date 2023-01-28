@@ -15,7 +15,7 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var pageDots: UIPageControl!
     
-    var sliderImages = ["img1","img1","img1","img1","img1"]
+    var sliderImages = ["familyguyslider","bobsburgersslider","theboysslider","jackryanslider"]
     var imageIndex = 0
     
     override func viewDidLoad() {
@@ -24,8 +24,8 @@ class HomeTabViewController: UIViewController {
         imageSliderCollectionView.delegate = self
         imageSliderCollectionView.dataSource = self
         
-        pageDots.numberOfPages = sliderImages.count
-        pageDots.currentPage = imageIndex
+        //pageDots.numberOfPages = sliderImages.count
+        //pageDots.currentPage = imageIndex
         
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
@@ -39,8 +39,8 @@ class HomeTabViewController: UIViewController {
             imageIndex = 0
         }
         
-        pageDots.numberOfPages = sliderImages.count
-        pageDots.currentPage = imageIndex
+        //pageDots.numberOfPages = sliderImages.count
+        //pageDots.currentPage = imageIndex
         imageSliderCollectionView.scrollToItem(at: IndexPath(item: imageIndex, section: 0), at: .right, animated: true)
     }
 
