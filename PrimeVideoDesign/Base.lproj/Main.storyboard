@@ -109,9 +109,6 @@
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bobsburgersslider" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-OI-Cup">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="190" id="xlx-h7-K3g"/>
-                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -147,6 +144,62 @@
                                         <color key="pageIndicatorTintColor" name="unselectedNavbarItemColor"/>
                                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pageControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zob-7R-IVY">
+                                        <rect key="frame" x="10" y="205" width="414" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue watching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="82W-gt-laK">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-uk-QRN">
+                                                <rect key="frame" x="0.0" y="23" width="414" height="112"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="LdK-eN-DRT">
+                                                    <size key="itemSize" width="174" height="100"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="continueWatchCell" id="i9q-yI-MUL" customClass="ContinueWatchCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="6" width="174" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Er1-bS-aTF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackryanThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="sPw-4o-kzb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="UMp-d0-BY6"/>
+                                                                        <constraint firstAttribute="width" constant="174" id="ZgY-JN-GHV"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="sPw-4o-kzb" firstAttribute="top" secondItem="Er1-bS-aTF" secondAttribute="top" id="2SD-Pu-GoN"/>
+                                                                <constraint firstItem="sPw-4o-kzb" firstAttribute="leading" secondItem="Er1-bS-aTF" secondAttribute="leading" id="7cG-5i-zwp"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sPw-4o-kzb" secondAttribute="bottom" id="8v0-0h-LQ0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sPw-4o-kzb" secondAttribute="trailing" id="wiJ-3E-Pwo"/>
+                                                                <constraint firstItem="sPw-4o-kzb" firstAttribute="centerY" secondItem="Er1-bS-aTF" secondAttribute="centerY" id="yW1-5y-KXh"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="174" height="100"/>
+                                                        <connections>
+                                                            <outlet property="continueWatchImage" destination="sPw-4o-kzb" id="lgk-MA-uPM"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="hhE-kF-MBb"/>
+                                            <constraint firstAttribute="height" constant="135" id="luN-pS-bte"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6Pf-1n-WI0" secondAttribute="trailing" id="2Ov-fa-eVt"/>
@@ -154,8 +207,10 @@
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" id="Bll-TF-W3k"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="top" secondItem="uBO-NA-7ht" secondAttribute="top" id="Juq-wm-beY"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="width" secondItem="uBO-NA-7ht" secondAttribute="width" id="OZh-Ur-qGp"/>
+                                    <constraint firstItem="zob-7R-IVY" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="V2K-Kz-Im5"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pf-1n-WI0" secondAttribute="bottom" id="XLw-qP-tPq"/>
                                     <constraint firstItem="HPo-2v-K0x" firstAttribute="trailing" secondItem="D6v-g3-Gyx" secondAttribute="trailing" id="aVy-C1-Dqi"/>
+                                    <constraint firstItem="zob-7R-IVY" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="15" id="q8S-Fb-pCS"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="-30" id="zvS-yE-8QH"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="MVg-Ke-YZa"/>
@@ -172,6 +227,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueWatchCollectionView" destination="0mp-uk-QRN" id="kgN-b5-4cg"/>
                         <outlet property="imageSliderCollectionView" destination="HI7-No-CK7" id="qXN-Lw-5dU"/>
                         <outlet property="pageDots" destination="D6v-g3-Gyx" id="91e-4d-7TP"/>
                     </connections>
@@ -320,6 +376,7 @@
     <resources>
         <image name="bobsburgersslider" width="1280" height="720"/>
         <image name="homeIcon" width="24" height="22"/>
+        <image name="jackryanThumbnail" width="356" height="200"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundColor">
