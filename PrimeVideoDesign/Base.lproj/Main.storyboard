@@ -200,10 +200,67 @@
                                             <constraint firstAttribute="height" constant="135" id="luN-pS-bte"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8cX-lG-jN2">
+                                        <rect key="frame" x="10" y="365" width="404" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazon Originals and Exclusives" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uuo-qa-6tv">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pm4-OM-Fj7">
+                                                <rect key="frame" x="0.0" y="23" width="404" height="112"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="bFa-fT-o2l">
+                                                    <size key="itemSize" width="174" height="100"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="amazonOriginalsCell" id="B1p-wY-18M" customClass="AmazonOriginalsCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="6" width="174" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vzW-1a-2Vp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackryanThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="eoz-Qe-eom">
+                                                                    <rect key="frame" x="0.0" y="2" width="174" height="96.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="174" id="pt1-Ky-tRC"/>
+                                                                        <constraint firstAttribute="height" constant="100" id="yjs-k2-khu"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="eoz-Qe-eom" firstAttribute="top" secondItem="vzW-1a-2Vp" secondAttribute="top" id="7cM-SA-AOJ"/>
+                                                                <constraint firstItem="eoz-Qe-eom" firstAttribute="leading" secondItem="vzW-1a-2Vp" secondAttribute="leading" id="ec3-iE-4hv"/>
+                                                                <constraint firstAttribute="bottom" secondItem="eoz-Qe-eom" secondAttribute="bottom" id="mDR-gX-92F"/>
+                                                                <constraint firstAttribute="trailing" secondItem="eoz-Qe-eom" secondAttribute="trailing" id="sRQ-Dt-mPv"/>
+                                                                <constraint firstItem="eoz-Qe-eom" firstAttribute="centerY" secondItem="vzW-1a-2Vp" secondAttribute="centerY" id="yfA-xK-z8u"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="174" height="100"/>
+                                                        <connections>
+                                                            <outlet property="amazonOriginalsImage" destination="eoz-Qe-eom" id="tEa-BD-HzZ"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="I9O-lV-MKR"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6Pf-1n-WI0" secondAttribute="trailing" id="2Ov-fa-eVt"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" id="3E0-Lt-sKK"/>
+                                    <constraint firstAttribute="trailing" secondItem="8cX-lG-jN2" secondAttribute="trailing" id="4ok-kQ-X91"/>
+                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="9MK-LQ-N3h"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" id="Bll-TF-W3k"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="top" secondItem="uBO-NA-7ht" secondAttribute="top" id="Juq-wm-beY"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="width" secondItem="uBO-NA-7ht" secondAttribute="width" id="OZh-Ur-qGp"/>
@@ -211,6 +268,7 @@
                                     <constraint firstAttribute="bottom" secondItem="6Pf-1n-WI0" secondAttribute="bottom" id="XLw-qP-tPq"/>
                                     <constraint firstItem="HPo-2v-K0x" firstAttribute="trailing" secondItem="D6v-g3-Gyx" secondAttribute="trailing" id="aVy-C1-Dqi"/>
                                     <constraint firstItem="zob-7R-IVY" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="15" id="q8S-Fb-pCS"/>
+                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="top" secondItem="zob-7R-IVY" secondAttribute="bottom" constant="25" id="sy5-ql-cBP"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="-30" id="zvS-yE-8QH"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="MVg-Ke-YZa"/>
@@ -227,6 +285,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amazonOriginalsCollectionView" destination="Pm4-OM-Fj7" id="V3i-Vv-AMx"/>
+                        <outlet property="amazonOriginalsTitle" destination="Uuo-qa-6tv" id="93a-kH-6nj"/>
                         <outlet property="continueWatchCollectionView" destination="0mp-uk-QRN" id="kgN-b5-4cg"/>
                         <outlet property="imageSliderCollectionView" destination="HI7-No-CK7" id="qXN-Lw-5dU"/>
                         <outlet property="pageDots" destination="D6v-g3-Gyx" id="91e-4d-7TP"/>

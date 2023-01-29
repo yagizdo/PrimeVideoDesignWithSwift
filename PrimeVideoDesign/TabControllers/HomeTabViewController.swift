@@ -13,11 +13,15 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var imageSliderCollectionView: UICollectionView!
     
+    @IBOutlet weak var amazonOriginalsCollectionView: UICollectionView!
     
     @IBOutlet weak var pageDots: UIPageControl!
     
+    @IBOutlet weak var amazonOriginalsTitle: UILabel!
+    
     var sliderImages = ["familyguyslider","bobsburgersslider","theboysslider","jackryanslider"]
     var continueWatchThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var amazonOriginalsThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var imageIndex = 0
     
     override func viewDidLoad() {
@@ -30,11 +34,18 @@ class HomeTabViewController: UIViewController {
         continueWatchCollectionView.dataSource = self
         continueWatchCollectionView.delegate = self
         
+        amazonOriginalsCollectionView.delegate = self
+        amazonOriginalsCollectionView.dataSource = self
+        
         updateImageSliderCellLayout()
         updatecontinueWatchCellLayout()
         
         pageDots.numberOfPages = sliderImages.count
         pageDots.currentPage = imageIndex
+        
+        let arrowImage = UIImage(systemName: "chevron.forward")
+    
+        amazonOriginalsTitle.add(image: arrowImage!, text: "Amazon Originals and Exclusives",isLeading: false)
         
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
@@ -93,7 +104,9 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         if collectionView == imageSliderCollectionView {
             return sliderImages.count
         } else if collectionView == continueWatchCollectionView {
-            return 5
+            return sliderImages.count
+        } else if collectionView == amazonOriginalsCollectionView {
+            return amazonOriginalsThumbnails.count
         }
         
         return 0
@@ -106,10 +119,19 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             cell.sliderImageView.image = UIImage(named: sliderImages[indexPath.row])
             
             return cell
+            
+            
         } else if collectionView == continueWatchCollectionView {
             let cell = continueWatchCollectionView.dequeueReusableCell(withReuseIdentifier: "continueWatchCell", for: indexPath) as! ContinueWatchCollectionViewCell
             
             cell.continueWatchImage.image = UIImage(named: continueWatchThumbnails[indexPath.row])
+            return cell
+            
+            
+        } else if collectionView == amazonOriginalsCollectionView {
+            let cell = amazonOriginalsCollectionView.dequeueReusableCell(withReuseIdentifier: "amazonOriginalsCell", for: indexPath) as! AmazonOriginalsCollectionViewCell
+            
+            cell.amazonOriginalsImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
             return cell
         }
         
@@ -121,6 +143,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         if collectionView == imageSliderCollectionView {
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         } else if collectionView == continueWatchCollectionView {
+            return CGSize(width: 174, height: 100)
+        } else if collectionView == amazonOriginalsCollectionView {
             return CGSize(width: 174, height: 100)
         }
         
