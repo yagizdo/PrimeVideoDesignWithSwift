@@ -19,12 +19,17 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var topMoviesCollectionView: UICollectionView!
     
+    @IBOutlet weak var recommendedTVCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var pageDots: UIPageControl!
     
     @IBOutlet weak var amazonOriginalsTitle: UILabel!
     
     @IBOutlet weak var turkishSeriesTitle: UILabel!
+    
+    @IBOutlet weak var topMoviesTitle: UILabel!
+    
     
     @IBOutlet weak var recommendedMoviesCollectionView: UICollectionView!
     
@@ -36,6 +41,7 @@ class HomeTabViewController: UIViewController {
     var turkishSeriesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var recommendedMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var topMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var recommendedTVThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
 
     var imageIndex = 0
     
@@ -61,6 +67,9 @@ class HomeTabViewController: UIViewController {
         topMoviesCollectionView.delegate = self
         topMoviesCollectionView.dataSource = self
         
+        recommendedTVCollectionView.dataSource = self
+        recommendedTVCollectionView.delegate = self
+        
         updateImageSliderCellLayout()
         updatecontinueWatchCellLayout()
         
@@ -73,6 +82,8 @@ class HomeTabViewController: UIViewController {
         
         turkishSeriesTitle.add(image: arrowImage!, text: "Turkish Movies and Series",isLeading: false)
         
+        topMoviesTitle.add(image: arrowImage!, text: "Top Movies",isLeading: false)
+        
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
     }
@@ -81,7 +92,7 @@ class HomeTabViewController: UIViewController {
     // Scroll view doesnt scroll without this code
     override func viewWillLayoutSubviews(){
     super.viewWillLayoutSubviews()
-    homeScrollView.contentSize = CGSize(width: 375, height: 1000)
+    homeScrollView.contentSize = CGSize(width: 375, height: 1200)
     }
     
     @objc func scrollingSetup() {
@@ -144,6 +155,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             return recommendedMoviesThumbnails.count
         } else if collectionView == topMoviesCollectionView {
             return topMoviesThumbnails.count
+        } else if collectionView == recommendedTVCollectionView {
+            return recommendedTVThumbnails.count
         }
         
         return 0
@@ -185,6 +198,11 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             
             cell.topMoviesImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
             return cell
+        } else if collectionView == recommendedTVCollectionView {
+            let cell = recommendedTVCollectionView.dequeueReusableCell(withReuseIdentifier: "recommendedTVCell", for: indexPath) as! recommendedTVCollectionViewCell
+            
+            cell.recommendedTVCell.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
+            return cell
         }
         
         return UICollectionViewCell()
@@ -203,6 +221,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         } else if collectionView == recommendedMoviesCollectionView {
             return CGSize(width: 174, height: 100)
         } else if collectionView == topMoviesCollectionView {
+            return CGSize(width: 174, height: 100)
+        } else if collectionView == recommendedTVCollectionView {
             return CGSize(width: 174, height: 100)
         }
         

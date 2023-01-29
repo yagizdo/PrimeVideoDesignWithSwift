@@ -424,10 +424,68 @@
                                             <constraint firstAttribute="width" constant="404" id="RVa-cq-Fpx"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MDy-Im-p2L">
+                                        <rect key="frame" x="10" y="1030" width="404" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended TV" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lzv-lC-5Ax">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="haC-4n-Te3">
+                                                <rect key="frame" x="0.0" y="23" width="404" height="117"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="o1d-pl-DpS">
+                                                    <size key="itemSize" width="174" height="100"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recommendedTVCell" id="MhQ-mc-i4b" customClass="recommendedTVCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-8.5" width="174" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="heO-sB-2AZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackryanThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="VfC-YE-NSD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="Jdb-64-yEq"/>
+                                                                        <constraint firstAttribute="width" constant="174" id="QM0-rp-wjA"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="VfC-YE-NSD" secondAttribute="trailing" id="6vh-Hp-gN0"/>
+                                                                <constraint firstItem="VfC-YE-NSD" firstAttribute="leading" secondItem="heO-sB-2AZ" secondAttribute="leading" id="EP9-xH-ePv"/>
+                                                                <constraint firstItem="VfC-YE-NSD" firstAttribute="top" secondItem="heO-sB-2AZ" secondAttribute="top" id="WVv-xX-w15"/>
+                                                                <constraint firstItem="VfC-YE-NSD" firstAttribute="centerY" secondItem="heO-sB-2AZ" secondAttribute="centerY" id="YcT-ix-LwD"/>
+                                                                <constraint firstAttribute="bottom" secondItem="VfC-YE-NSD" secondAttribute="bottom" id="zpb-SH-hMo"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="174" height="100"/>
+                                                        <connections>
+                                                            <outlet property="recommendedTVCell" destination="VfC-YE-NSD" id="ERD-3D-NiG"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="404" id="w5M-yv-dgu"/>
+                                            <constraint firstAttribute="height" constant="140" id="zml-ix-s2W"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6Pf-1n-WI0" secondAttribute="trailing" id="2Ov-fa-eVt"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" id="3E0-Lt-sKK"/>
+                                    <constraint firstItem="MDy-Im-p2L" firstAttribute="top" secondItem="N2j-i4-pL2" secondAttribute="bottom" constant="25" id="3zw-nf-kZa"/>
+                                    <constraint firstItem="MDy-Im-p2L" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="B0i-6A-sS1"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" id="Bll-TF-W3k"/>
                                     <constraint firstItem="8cX-lG-jN2" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="Ewv-OW-dxv"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="top" secondItem="uBO-NA-7ht" secondAttribute="top" id="Juq-wm-beY"/>
@@ -469,7 +527,9 @@
                         <outlet property="imageSliderCollectionView" destination="HI7-No-CK7" id="qXN-Lw-5dU"/>
                         <outlet property="pageDots" destination="D6v-g3-Gyx" id="91e-4d-7TP"/>
                         <outlet property="recommendedMoviesCollectionView" destination="PDS-AY-Auz" id="Cq9-bN-ie3"/>
+                        <outlet property="recommendedTVCollectionView" destination="haC-4n-Te3" id="Jig-tE-Ufq"/>
                         <outlet property="topMoviesCollectionView" destination="oeV-yZ-coU" id="Al1-XU-YW9"/>
+                        <outlet property="topMoviesTitle" destination="mOv-iz-8Y7" id="WVr-dz-fat"/>
                         <outlet property="turkishSeriesCollectionView" destination="fCR-lG-bWH" id="CBq-K7-Dcc"/>
                         <outlet property="turkishSeriesTitle" destination="9E1-Qn-MAk" id="84c-CG-jvh"/>
                     </connections>
