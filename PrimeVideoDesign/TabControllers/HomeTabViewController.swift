@@ -24,11 +24,15 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var turkishSeriesTitle: UILabel!
     
+    @IBOutlet weak var recommendedMoviesCollectionView: UICollectionView!
+    
+    @IBOutlet weak var homeScrollView: UIScrollView!
     
     var sliderImages = ["familyguyslider","bobsburgersslider","theboysslider","jackryanslider"]
     var continueWatchThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var amazonOriginalsThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var turkishSeriesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var recommendedMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
 
     var imageIndex = 0
     
@@ -48,6 +52,9 @@ class HomeTabViewController: UIViewController {
         turkishSeriesCollectionView.delegate = self
         turkishSeriesCollectionView.dataSource = self
         
+        recommendedMoviesCollectionView.dataSource = self
+        recommendedMoviesCollectionView.delegate = self
+        
         updateImageSliderCellLayout()
         updatecontinueWatchCellLayout()
         
@@ -62,6 +69,13 @@ class HomeTabViewController: UIViewController {
         
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
+    }
+    
+    // This code for scroll view
+    // Scroll view doesnt scroll without this code
+    override func viewWillLayoutSubviews(){
+    super.viewWillLayoutSubviews()
+    homeScrollView.contentSize = CGSize(width: 375, height: 1000)
     }
     
     @objc func scrollingSetup() {
@@ -120,6 +134,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             return amazonOriginalsThumbnails.count
         } else if collectionView == turkishSeriesCollectionView {
             return turkishSeriesThumbnails.count
+        } else if collectionView == recommendedMoviesCollectionView {
+            return recommendedMoviesThumbnails.count
         }
         
         return 0
@@ -151,6 +167,11 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             
             cell.turkishSeriesImage.image = UIImage(named: turkishSeriesThumbnails[indexPath.row])
             return cell
+        } else if collectionView == recommendedMoviesCollectionView {
+            let cell = recommendedMoviesCollectionView.dequeueReusableCell(withReuseIdentifier: "recommendedMoviesCell", for: indexPath) as! RecommendedMoviesCollectionViewCell
+            
+            cell.recommendedMoviesImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
+            return cell
         }
         
         return UICollectionViewCell()
@@ -165,6 +186,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         } else if collectionView == amazonOriginalsCollectionView {
             return CGSize(width: 174, height: 100)
         } else if collectionView == turkishSeriesCollectionView {
+            return CGSize(width: 174, height: 100)
+        } else if collectionView == recommendedMoviesCollectionView {
             return CGSize(width: 174, height: 100)
         }
         
