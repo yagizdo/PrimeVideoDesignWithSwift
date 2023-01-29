@@ -145,7 +145,7 @@
                                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pageControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zob-7R-IVY">
-                                        <rect key="frame" x="10" y="205" width="414" height="135"/>
+                                        <rect key="frame" x="10" y="205" width="414" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue watching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="82W-gt-laK">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="18"/>
@@ -155,7 +155,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-uk-QRN">
-                                                <rect key="frame" x="0.0" y="23" width="414" height="112"/>
+                                                <rect key="frame" x="0.0" y="23" width="414" height="117"/>
                                                 <color key="backgroundColor" name="backgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="LdK-eN-DRT">
                                                     <size key="itemSize" width="174" height="100"/>
@@ -165,7 +165,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="continueWatchCell" id="i9q-yI-MUL" customClass="ContinueWatchCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="6" width="174" height="100"/>
+                                                        <rect key="frame" x="0.0" y="8.5" width="174" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Er1-bS-aTF">
                                                             <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
@@ -197,11 +197,11 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="414" id="hhE-kF-MBb"/>
-                                            <constraint firstAttribute="height" constant="135" id="luN-pS-bte"/>
+                                            <constraint firstAttribute="height" constant="140" id="luN-pS-bte"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8cX-lG-jN2">
-                                        <rect key="frame" x="10" y="365" width="404" height="135"/>
+                                        <rect key="frame" x="10" y="370" width="404" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazon Originals and Exclusives" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uuo-qa-6tv">
                                                 <rect key="frame" x="0.0" y="0.0" width="404" height="18"/>
@@ -211,7 +211,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pm4-OM-Fj7">
-                                                <rect key="frame" x="0.0" y="23" width="404" height="112"/>
+                                                <rect key="frame" x="0.0" y="23" width="404" height="117"/>
                                                 <color key="backgroundColor" name="backgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="bFa-fT-o2l">
                                                     <size key="itemSize" width="174" height="100"/>
@@ -221,14 +221,14 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="amazonOriginalsCell" id="B1p-wY-18M" customClass="AmazonOriginalsCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="6" width="174" height="100"/>
+                                                        <rect key="frame" x="0.0" y="8.5" width="174" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vzW-1a-2Vp">
                                                             <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackryanThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="eoz-Qe-eom">
-                                                                    <rect key="frame" x="0.0" y="2" width="174" height="96.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="174" id="pt1-Ky-tRC"/>
                                                                         <constraint firstAttribute="height" constant="100" id="yjs-k2-khu"/>
@@ -252,7 +252,7 @@
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="I9O-lV-MKR"/>
+                                            <constraint firstAttribute="height" constant="140" id="I9O-lV-MKR"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

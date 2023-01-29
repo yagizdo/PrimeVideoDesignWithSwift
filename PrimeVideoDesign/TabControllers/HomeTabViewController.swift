@@ -43,7 +43,7 @@ class HomeTabViewController: UIViewController {
         pageDots.numberOfPages = sliderImages.count
         pageDots.currentPage = imageIndex
         
-        let arrowImage = UIImage(systemName: "chevron.forward")
+        let arrowImage = UIImage(named:"nextIcon")
     
         amazonOriginalsTitle.add(image: arrowImage!, text: "Amazon Originals and Exclusives",isLeading: false)
         
