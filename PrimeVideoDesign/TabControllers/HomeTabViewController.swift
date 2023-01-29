@@ -17,6 +17,8 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var turkishSeriesCollectionView: UICollectionView!
     
+    @IBOutlet weak var topMoviesCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var pageDots: UIPageControl!
     
@@ -33,6 +35,7 @@ class HomeTabViewController: UIViewController {
     var amazonOriginalsThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var turkishSeriesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var recommendedMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var topMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
 
     var imageIndex = 0
     
@@ -54,6 +57,9 @@ class HomeTabViewController: UIViewController {
         
         recommendedMoviesCollectionView.dataSource = self
         recommendedMoviesCollectionView.delegate = self
+        
+        topMoviesCollectionView.delegate = self
+        topMoviesCollectionView.dataSource = self
         
         updateImageSliderCellLayout()
         updatecontinueWatchCellLayout()
@@ -136,6 +142,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             return turkishSeriesThumbnails.count
         } else if collectionView == recommendedMoviesCollectionView {
             return recommendedMoviesThumbnails.count
+        } else if collectionView == topMoviesCollectionView {
+            return topMoviesThumbnails.count
         }
         
         return 0
@@ -172,6 +180,11 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             
             cell.recommendedMoviesImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
             return cell
+        } else if collectionView == topMoviesCollectionView {
+            let cell = topMoviesCollectionView.dequeueReusableCell(withReuseIdentifier: "topMoviesCell", for: indexPath) as! TopMoviesCollectionViewCell
+            
+            cell.topMoviesImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
+            return cell
         }
         
         return UICollectionViewCell()
@@ -188,6 +201,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         } else if collectionView == turkishSeriesCollectionView {
             return CGSize(width: 174, height: 100)
         } else if collectionView == recommendedMoviesCollectionView {
+            return CGSize(width: 174, height: 100)
+        } else if collectionView == topMoviesCollectionView {
             return CGSize(width: 174, height: 100)
         }
         
