@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBO-NA-7ht">
-                                <rect key="frame" x="0.0" y="48" width="422" height="848"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Pf-1n-WI0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
@@ -92,12 +92,11 @@
                                                 <color key="backgroundColor" name="backgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="YI6-N9-5jc"/>
-                                                    <constraint firstAttribute="width" constant="414" id="snJ-hu-g3S"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t7X-dy-5eE">
                                                     <size key="itemSize" width="414" height="190"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="50" height="50"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
@@ -108,10 +107,9 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-OI-Cup">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bobsburgersslider" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-OI-Cup">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="422" id="Ig1-LE-O2n"/>
                                                                         <constraint firstAttribute="height" constant="190" id="xlx-h7-K3g"/>
                                                                     </constraints>
                                                                 </imageView>
@@ -129,17 +127,20 @@
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1kt-b4-SfS">
+                                                    <rect key="frame" x="414" y="0.0" width="50" height="190"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionReusableView>
                                             </collectionView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="HI7-No-CK7" secondAttribute="trailing" id="JeM-1l-QjV"/>
-                                            <constraint firstAttribute="width" constant="414" id="UIS-RC-Mpi"/>
                                             <constraint firstItem="HI7-No-CK7" firstAttribute="leading" secondItem="6Pf-1n-WI0" secondAttribute="leading" id="XWA-fA-GBn"/>
                                             <constraint firstItem="HI7-No-CK7" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="top" id="bNv-VT-fJa"/>
                                         </constraints>
                                     </stackView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="D6v-g3-Gyx">
-                                        <rect key="frame" x="0.0" y="160" width="422" height="20"/>
+                                        <rect key="frame" x="0.0" y="160" width="414" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="ztG-1z-rN3"/>
                                         </constraints>
@@ -152,7 +153,7 @@
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" id="3E0-Lt-sKK"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" id="Bll-TF-W3k"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="top" secondItem="uBO-NA-7ht" secondAttribute="top" id="Juq-wm-beY"/>
-                                    <constraint firstItem="6Pf-1n-WI0" firstAttribute="width" secondItem="uBO-NA-7ht" secondAttribute="width" multiplier="0.980676" id="OZh-Ur-qGp"/>
+                                    <constraint firstItem="6Pf-1n-WI0" firstAttribute="width" secondItem="uBO-NA-7ht" secondAttribute="width" id="OZh-Ur-qGp"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pf-1n-WI0" secondAttribute="bottom" id="XLw-qP-tPq"/>
                                     <constraint firstItem="HPo-2v-K0x" firstAttribute="trailing" secondItem="D6v-g3-Gyx" secondAttribute="trailing" id="aVy-C1-Dqi"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="-30" id="zvS-yE-8QH"/>
@@ -317,8 +318,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bobsburgersslider" width="1280" height="720"/>
         <image name="homeIcon" width="24" height="22"/>
-        <image name="img1" width="347" height="145"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundColor">

@@ -23,9 +23,26 @@ class HomeTabViewController: UIViewController {
 
         imageSliderCollectionView.delegate = self
         imageSliderCollectionView.dataSource = self
+        imageSliderCollectionView.isPagingEnabled = true
         
-        //pageDots.numberOfPages = sliderImages.count
-        //pageDots.currentPage = imageIndex
+        let cellDesign = UICollectionViewFlowLayout()
+        
+        cellDesign.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        cellDesign.minimumLineSpacing = 0
+        cellDesign.minimumInteritemSpacing = 0
+        cellDesign.scrollDirection = .horizontal
+        
+        let screenWidth = UIScreen.main.bounds.width
+        
+        let cellWidth = (screenWidth) / 1
+        
+        cellDesign.itemSize = CGSize(width: cellWidth, height: cellWidth)
+        
+        imageSliderCollectionView.collectionViewLayout = cellDesign
+        
+        pageDots.numberOfPages = sliderImages.count
+        pageDots.currentPage = imageIndex
         
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
@@ -39,8 +56,8 @@ class HomeTabViewController: UIViewController {
             imageIndex = 0
         }
         
-        //pageDots.numberOfPages = sliderImages.count
-        //pageDots.currentPage = imageIndex
+        pageDots.numberOfPages = sliderImages.count
+        pageDots.currentPage = imageIndex
         imageSliderCollectionView.scrollToItem(at: IndexPath(item: imageIndex, section: 0), at: .right, animated: true)
     }
 
@@ -63,4 +80,12 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let currentIndex:CGFloat = self.imageSliderCollectionView.contentOffset.x / self.imageSliderCollectionView.frame.size.width
+           pageDots.currentPage = Int(currentIndex)
+        self.imageIndex = Int(currentIndex)
+    }
+    
+    
 }
