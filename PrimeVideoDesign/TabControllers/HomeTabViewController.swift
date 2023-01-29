@@ -15,13 +15,21 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var amazonOriginalsCollectionView: UICollectionView!
     
+    @IBOutlet weak var turkishSeriesCollectionView: UICollectionView!
+    
+    
     @IBOutlet weak var pageDots: UIPageControl!
     
     @IBOutlet weak var amazonOriginalsTitle: UILabel!
     
+    @IBOutlet weak var turkishSeriesTitle: UILabel!
+    
+    
     var sliderImages = ["familyguyslider","bobsburgersslider","theboysslider","jackryanslider"]
     var continueWatchThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
     var amazonOriginalsThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var turkishSeriesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+
     var imageIndex = 0
     
     override func viewDidLoad() {
@@ -37,6 +45,9 @@ class HomeTabViewController: UIViewController {
         amazonOriginalsCollectionView.delegate = self
         amazonOriginalsCollectionView.dataSource = self
         
+        turkishSeriesCollectionView.delegate = self
+        turkishSeriesCollectionView.dataSource = self
+        
         updateImageSliderCellLayout()
         updatecontinueWatchCellLayout()
         
@@ -46,6 +57,8 @@ class HomeTabViewController: UIViewController {
         let arrowImage = UIImage(named:"nextIcon")
     
         amazonOriginalsTitle.add(image: arrowImage!, text: "Amazon Originals and Exclusives",isLeading: false)
+        
+        turkishSeriesTitle.add(image: arrowImage!, text: "Turkish Movies and Series",isLeading: false)
         
         Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(scrollingSetup), userInfo: nil, repeats: true)
         
@@ -87,8 +100,6 @@ class HomeTabViewController: UIViewController {
         
         let screenWidth = UIScreen.main.bounds.width
         
-        let cellWidth = (screenWidth) / 1
-        
         cellDesign.itemSize = CGSize(width: 174, height: 100)
         
         
@@ -107,6 +118,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             return sliderImages.count
         } else if collectionView == amazonOriginalsCollectionView {
             return amazonOriginalsThumbnails.count
+        } else if collectionView == turkishSeriesCollectionView {
+            return turkishSeriesThumbnails.count
         }
         
         return 0
@@ -133,6 +146,11 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
             
             cell.amazonOriginalsImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
             return cell
+        } else if collectionView == turkishSeriesCollectionView {
+            let cell = turkishSeriesCollectionView.dequeueReusableCell(withReuseIdentifier: "turkishSeriesCell", for: indexPath) as! TurkishSeriesCollectionViewCell
+            
+            cell.turkishSeriesImage.image = UIImage(named: turkishSeriesThumbnails[indexPath.row])
+            return cell
         }
         
         return UICollectionViewCell()
@@ -145,6 +163,8 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         } else if collectionView == continueWatchCollectionView {
             return CGSize(width: 174, height: 100)
         } else if collectionView == amazonOriginalsCollectionView {
+            return CGSize(width: 174, height: 100)
+        } else if collectionView == turkishSeriesCollectionView {
             return CGSize(width: 174, height: 100)
         }
         

@@ -252,23 +252,81 @@
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="140" id="I9O-lV-MKR"/>
+                                            <constraint firstAttribute="height" constant="140" id="ol6-QQ-cvE"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bFm-aL-fM4">
+                                        <rect key="frame" x="10" y="535" width="404" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turkish Movies and Series" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9E1-Qn-MAk">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-lG-bWH">
+                                                <rect key="frame" x="0.0" y="23" width="404" height="117"/>
+                                                <color key="backgroundColor" name="backgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="SVW-v4-9Zp">
+                                                    <size key="itemSize" width="174" height="100"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="turkishSeriesCell" id="eEa-NQ-NXv" customClass="TurkishSeriesCollectionViewCell" customModule="PrimeVideoDesign" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="8.5" width="174" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DKO-S5-eUy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackryanThumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="tAo-i0-5Ok">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="KUB-ZD-UxY"/>
+                                                                        <constraint firstAttribute="width" constant="174" id="sqa-cb-ueo"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="tAo-i0-5Ok" secondAttribute="trailing" id="26y-mW-vUW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tAo-i0-5Ok" secondAttribute="bottom" id="7Tm-Sp-8Ud"/>
+                                                                <constraint firstItem="tAo-i0-5Ok" firstAttribute="top" secondItem="DKO-S5-eUy" secondAttribute="top" id="Mp0-cH-Mde"/>
+                                                                <constraint firstItem="tAo-i0-5Ok" firstAttribute="leading" secondItem="DKO-S5-eUy" secondAttribute="leading" id="mG9-2Q-JPE"/>
+                                                                <constraint firstItem="tAo-i0-5Ok" firstAttribute="centerY" secondItem="DKO-S5-eUy" secondAttribute="centerY" id="wo8-VA-KNm"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="174" height="100"/>
+                                                        <connections>
+                                                            <outlet property="turkishSeriesImage" destination="tAo-i0-5Ok" id="7jB-es-Ni5"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="6Kh-ri-oGl"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="bFm-aL-fM4" firstAttribute="top" secondItem="8cX-lG-jN2" secondAttribute="bottom" constant="25" id="1Lg-Q7-WVe"/>
                                     <constraint firstAttribute="trailing" secondItem="6Pf-1n-WI0" secondAttribute="trailing" id="2Ov-fa-eVt"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" id="3E0-Lt-sKK"/>
-                                    <constraint firstAttribute="trailing" secondItem="8cX-lG-jN2" secondAttribute="trailing" id="4ok-kQ-X91"/>
-                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="9MK-LQ-N3h"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" id="Bll-TF-W3k"/>
+                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="Ewv-OW-dxv"/>
+                                    <constraint firstItem="HPo-2v-K0x" firstAttribute="trailing" secondItem="bFm-aL-fM4" secondAttribute="trailing" id="Hpj-ej-wzY"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="top" secondItem="uBO-NA-7ht" secondAttribute="top" id="Juq-wm-beY"/>
+                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="trailing" secondItem="HPo-2v-K0x" secondAttribute="trailing" id="MFt-eF-evo"/>
                                     <constraint firstItem="6Pf-1n-WI0" firstAttribute="width" secondItem="uBO-NA-7ht" secondAttribute="width" id="OZh-Ur-qGp"/>
                                     <constraint firstItem="zob-7R-IVY" firstAttribute="leading" secondItem="HPo-2v-K0x" secondAttribute="leading" constant="10" id="V2K-Kz-Im5"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pf-1n-WI0" secondAttribute="bottom" id="XLw-qP-tPq"/>
+                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="top" secondItem="zob-7R-IVY" secondAttribute="bottom" constant="25" id="YhD-3L-7tw"/>
                                     <constraint firstItem="HPo-2v-K0x" firstAttribute="trailing" secondItem="D6v-g3-Gyx" secondAttribute="trailing" id="aVy-C1-Dqi"/>
+                                    <constraint firstItem="bFm-aL-fM4" firstAttribute="leading" secondItem="uBO-NA-7ht" secondAttribute="leading" constant="10" id="c9F-xg-ueT"/>
                                     <constraint firstItem="zob-7R-IVY" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="15" id="q8S-Fb-pCS"/>
-                                    <constraint firstItem="8cX-lG-jN2" firstAttribute="top" secondItem="zob-7R-IVY" secondAttribute="bottom" constant="25" id="sy5-ql-cBP"/>
                                     <constraint firstItem="D6v-g3-Gyx" firstAttribute="top" secondItem="6Pf-1n-WI0" secondAttribute="bottom" constant="-30" id="zvS-yE-8QH"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="MVg-Ke-YZa"/>
@@ -290,6 +348,8 @@
                         <outlet property="continueWatchCollectionView" destination="0mp-uk-QRN" id="kgN-b5-4cg"/>
                         <outlet property="imageSliderCollectionView" destination="HI7-No-CK7" id="qXN-Lw-5dU"/>
                         <outlet property="pageDots" destination="D6v-g3-Gyx" id="91e-4d-7TP"/>
+                        <outlet property="turkishSeriesCollectionView" destination="fCR-lG-bWH" id="CBq-K7-Dcc"/>
+                        <outlet property="turkishSeriesTitle" destination="9E1-Qn-MAk" id="84c-CG-jvh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyd-kE-Xri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
