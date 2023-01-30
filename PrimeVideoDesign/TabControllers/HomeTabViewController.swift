@@ -35,13 +35,13 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet weak var homeScrollView: UIScrollView!
     
-    var sliderImages = ["familyguyslider","bobsburgersslider","theboysslider","jackryanslider"]
-    var continueWatchThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
-    var amazonOriginalsThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
-    var turkishSeriesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
-    var recommendedMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
-    var topMoviesThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
-    var recommendedTVThumbnails = ["jackryanThumbnail","thetestThumbnail","wildcatThumbnail","thetestThumbnail","wildcatThumbnail"]
+    var sliderImages = ["bobsburgersslider","familyguyslider","theboysslider","americandadthumbnail"]
+    var continueWatchThumbnails = ["bobsburgersthumbnail","b99thumbnail","familyguy3","thetestThumbnail","wildcatThumbnail"]
+    var amazonOriginalsThumbnails = ["jackryanThumbnail","recepivedik7thumbnail","thetestThumbnail","wildcatThumbnail"]
+    var turkishSeriesThumbnails = ["organizeislerthumbnail","dayithumbnail","muslumthumbnail","organizeislerthumbnail"]
+    var recommendedMoviesThumbnails = ["tedthumbnail","recepivedik7thumbnail","theofficethumbnail","thetestThumbnail","wildcatThumbnail"]
+    var topMoviesThumbnails = ["ironman1thumbnail","americanpsychothumbnail","thewolfwallstreetthumbnail","avengersthumbnail"]
+    var recommendedTVThumbnails = ["spongebobthumbnail","theofficethumbnail","b99thumbnail","himymthumbnail"]
 
     var imageIndex = 0
     
@@ -146,7 +146,7 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         if collectionView == imageSliderCollectionView {
             return sliderImages.count
         } else if collectionView == continueWatchCollectionView {
-            return sliderImages.count
+            return continueWatchThumbnails.count
         } else if collectionView == amazonOriginalsCollectionView {
             return amazonOriginalsThumbnails.count
         } else if collectionView == turkishSeriesCollectionView {
@@ -196,12 +196,12 @@ extension HomeTabViewController : UICollectionViewDataSource, UICollectionViewDe
         } else if collectionView == topMoviesCollectionView {
             let cell = topMoviesCollectionView.dequeueReusableCell(withReuseIdentifier: "topMoviesCell", for: indexPath) as! TopMoviesCollectionViewCell
             
-            cell.topMoviesImage.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
+            cell.topMoviesImage.image = UIImage(named: topMoviesThumbnails[indexPath.row])
             return cell
         } else if collectionView == recommendedTVCollectionView {
             let cell = recommendedTVCollectionView.dequeueReusableCell(withReuseIdentifier: "recommendedTVCell", for: indexPath) as! recommendedTVCollectionViewCell
             
-            cell.recommendedTVCell.image = UIImage(named: amazonOriginalsThumbnails[indexPath.row])
+            cell.recommendedTVCell.image = UIImage(named: recommendedTVThumbnails[indexPath.row])
             return cell
         }
         
