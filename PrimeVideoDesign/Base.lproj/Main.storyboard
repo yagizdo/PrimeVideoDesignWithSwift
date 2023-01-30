@@ -51,7 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="kTc-5e-rEy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Stuff" id="BPA-pM-iHa"/>
+                    <tabBarItem key="tabBarItem" title="My Stuff" image="person.circle" catalog="system" id="BPA-pM-iHa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njS-wy-kbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -680,6 +680,7 @@
         <image name="homeIcon" width="24" height="22"/>
         <image name="jackryanThumbnail" width="356" height="200"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundColor">
             <color red="0.063000001013278961" green="0.086000002920627594" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
